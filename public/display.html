@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lyric Display</title>
+  <link rel="stylesheet" href="display.css">
+</head>
+
+<body>
+  <div id="stage">
+    <div id="verse" class="verse"></div>
+  </div>
+  <script src="display.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+
+    if (params.has("preview")) {
+      document.body.classList.add("preview-mode");
+    }
+  </script>
+</body>
+
+</html>

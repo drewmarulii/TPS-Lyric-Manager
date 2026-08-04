@@ -1,0 +1,13 @@
+{
+  "name": "lyric-manager",
+  "version": "1.0.0",
+  "description": "Lightweight lyric management tool with an OBS-ready browser-source display.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  }
+}

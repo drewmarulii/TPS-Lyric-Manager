@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPS Lyric Manager</title>
+  <link rel="stylesheet" href="control.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Lyric Manager</h1>
+      <div class="obs-link">
+        OBS Browser Source URL:
+        <code id="obsUrl"></code>
+        <button id="copyUrlBtn">Copy</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section class="panel songs-panel">
+        <h2>Songs</h2>
+        <div class="song-search">
+          <input id="songSearchInput" type="text" placeholder="Search songs...">
+          <button id="songSearchBtn">
+            Search
+          </button>
+          <button id="songResetBtn">
+            Reset
+          </button>
+        </div>
+
+        <ul id="songList" class="song-list"></ul>
+        <button id="newSongBtn" class="primary">
+          + New Song
+        </button>
+      </section>
+
+      <section class="panel preview-panel">
+        <h2>
+          OBS Preview
+          <span class="preview-hint">
+            (exactly what OBS shows)
+          </span>
+        </h2>
+
+        <div class="preview-frame">
+          <iframe id="previewFrame" src="display.html?preview" title="OBS Preview">
+          </iframe>
+        </div>
+      </section>
+
+      <section class="panel editor-panel">
+        <h2 id="editorHeading">
+          Edit Song
+        </h2>
+        <input id="editTitle" type="text" placeholder="Song title">
+        <textarea id="editVerses" placeholder="Verse 1...
+
+Verse 2...
+
+(Separate each verse with one blank line)">
+            </textarea>
+
+        <div class="editor-actions">
+          <button id="saveSongBtn" class="primary">
+            Save
+          </button>
+          <button id="deleteSongBtn" class="danger">
+            Delete
+          </button>
+        </div>
+      </section>
+
+      <section class="panel live-panel">
+        <h2>Now Playing</h2>
+        <div id="nowPlayingTitle" class="now-title">
+          No song loaded
+        </div>
+        <div id="versePreview" class="verse-preview">
+          —
+        </div>
+        <div class="verse-nav">
+          <button id="prevBtn">
+            ◀ Prev
+          </button>
+          <span id="verseCounter">
+            0 / 0
+          </span>
+          <button id="nextBtn">
+            Next ▶
+          </button>
+        </div>
+        <div id="verseJump" class="verse-jump">
+        </div>
+        <button id="blankBtn" class="warning">
+          Blank / Show Toggle
+        </button>
+      </section>
+    </div>
+  </div>
+  <script src="control.js"></script>
+</body>
+</html>
