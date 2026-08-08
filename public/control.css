@@ -82,6 +82,10 @@ h1 {
       "editor";
   }
 
+  .songs-panel {
+    height: 320px;
+  }
+
 }
 
 .panel {
