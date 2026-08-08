@@ -17,8 +17,8 @@ html, body {
 }
 .verse {
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 60px;
-  font-weight: 700;
+  font-size: 70px;
+  font-weight: 900;
   text-align: center;
   color: #ffffff;
   white-space: pre-wrap;
@@ -30,7 +30,7 @@ html, body {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.35s ease, transform 0.35s ease;
-  max-width: 90%;
+  max-width: 100%;
 }
 .verse.visible {
   opacity: 1;
