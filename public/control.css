@@ -467,3 +467,16 @@ button.warning:hover {
     border: none;
     display: block;
 }
+
+.home-btn {
+    background: rgba(56, 189, 248, 0.1) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.home-btn:hover {
+    background: var(--accent) !important;
+    color: #0f172a !important;
+}
