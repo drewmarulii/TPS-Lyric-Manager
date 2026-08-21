@@ -20,9 +20,9 @@ const songResetBtn = document.getElementById('songResetBtn');
 
 let songs = [];
 let songFilter = '';
-let activeEditId = null; // song currently open in editor
+let activeEditId = null;
 let state = { songId: null, verseIndex: 0, blanked: true, songTitle: null, totalVerses: 0 };
-let currentSongCache = null; // full song object for the loaded (live) song
+let currentSongCache = null;
 
 const obsUrl = `${location.origin}/display.html`;
 obsUrlEl.textContent = obsUrl;
@@ -48,7 +48,7 @@ async function api(path, opts = {}) {
     const token = prompt('This control panel is password-protected.\nEnter the show password:');
     if (token !== null) {
       setAuthToken(token);
-      return api(path, opts); // retry once with the new token
+      return api(path, opts);
     }
     throw new Error('Unauthorized');
   }
@@ -197,6 +197,7 @@ function connectWS() {
   const ws = new WebSocket(`${proto}://${location.host}`);
   ws.onmessage = (evt) => {
     const data = JSON.parse(evt.data);
+    if (data.channel !== 'lyric') return;
     state = { ...state, ...data };
     renderLive();
   };

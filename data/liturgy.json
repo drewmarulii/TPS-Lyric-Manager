@@ -1,0 +1,154 @@
+[
+  {
+    "worship": "sekolah-sabat",
+    "detail": [
+      {
+        "program-name": "Chorister",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Pemimpin",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Ayat Inti & Doa",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Berita Mission",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Lagu Pujian",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Promosi SS",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Tutup",
+        "participant-name": "-"
+      }
+    ]
+  },
+  {
+    "worship": "khotbah",
+    "detail": [
+      {
+        "program-name": "Pengumuman Jemaat",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Chorister",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Pianist",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Electonist",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Singkat",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Ayat Bersahutan",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Syafaat",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Bacaan Persembahan",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Persembahan",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Persembahan & Perpuluhan",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Lagu Pujian",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Cerita Anak Anak",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Ayat Inti",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Khotbah",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Berkat",
+        "participant-name": "-"
+      }
+    ]
+  },
+  {
+    "worship": "rabu-malam",
+    "detail": [
+      {
+        "program-name": "Pemimpin Acara",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Buka",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Lagu Pujian",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Pembicara",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Tutup",
+        "participant-name": "-"
+      }
+    ]
+  },
+  {
+    "worship": "vesper",
+    "detail": [
+      {
+        "program-name": "Pemimpin Acara",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Buka",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Lagu Pujian",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Pembicara",
+        "participant-name": "-"
+      },
+      {
+        "program-name": "Doa Tutup",
+        "participant-name": "-"
+      }
+    ]
+  },
+  {
+    "worship": "pemuda-advent",
+    "detail": []
+  }
+]

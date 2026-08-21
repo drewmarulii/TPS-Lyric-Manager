@@ -54,6 +54,18 @@ h1 {
   cursor: pointer;
 }
 
+.page-nav {
+  margin-bottom: 14px;
+}
+.page-nav a {
+  color: #9aa0aa;
+  text-decoration: none;
+  font-size: 13px;
+}
+.page-nav a:hover {
+  color: #eee;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 280px 1.5fr 420px;

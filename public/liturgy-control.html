@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Liturgy Control</title>
+<link rel="stylesheet" href="control.css">
+<link rel="stylesheet" href="liturgy-control.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Liturgy Control</h1>
+      <div class="obs-link">
+        OBS Browser Source URL: <code id="obsUrl"></code>
+        <button id="copyUrlBtn">Copy</button>
+      </div>
+    </header>
+
+    <nav class="page-nav">
+      <a href="control.html">◀ Lyrics Control</a>
+    </nav>
+
+    <div class="layout">
+      <section class="panel songs-panel">
+        <h2>Worship</h2>
+        <ul id="worshipList" class="song-list"></ul>
+        <button id="newWorshipBtn" class="primary">+ New Worship</button>
+      </section>
+
+      <section class="panel preview-panel">
+        <h2>OBS Preview <span class="preview-hint">(exactly what OBS shows — updates live)</span></h2>
+        <div class="preview-frame">
+          <iframe id="previewFrame" src="liturgy-display.html?preview" title="Liturgy OBS Display Preview"></iframe>
+        </div>
+      </section>
+
+      <section class="panel live-panel">
+        <h2>Now Showing</h2>
+        <div id="nowWorship" class="now-title">No worship selected</div>
+        <div class="liturgy-preview-box">
+          <div class="liturgy-label" id="nowProgram">—</div>
+          <div class="liturgy-name" id="nowParticipant">—</div>
+        </div>
+        <button id="blankBtn" class="warning">Blank / Show Toggle</button>
+      </section>
+
+      <section class="panel editor-panel">
+        <h2 id="programsHeading">Program Items</h2>
+        <div id="programFlags" class="program-flags"></div>
+        <div class="item-editor">
+          <input id="itemProgramInput" type="text" placeholder="Program name (e.g. Sermon)">
+          <input id="itemParticipantInput" type="text" placeholder="Participant name">
+          <div class="item-editor-actions">
+            <button id="itemSaveBtn" class="primary">+ Add Item</button>
+            <button id="itemCancelBtn" class="danger" hidden>Cancel</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="liturgy-control.js"></script>
+</body>
+</html>

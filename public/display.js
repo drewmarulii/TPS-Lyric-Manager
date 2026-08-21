@@ -23,7 +23,11 @@ function render(data) {
 function connectWS() {
   const proto = location.protocol === 'https:' ? 'wss' : 'ws';
   const ws = new WebSocket(`${proto}://${location.host}`);
-  ws.onmessage = (evt) => render(JSON.parse(evt.data));
+  ws.onmessage = (evt) => {
+    const data = JSON.parse(evt.data);
+    if (data.channel !== 'lyric') return;
+    render(data);
+  };
   ws.onclose = () => setTimeout(connectWS, 1500);
 }
 

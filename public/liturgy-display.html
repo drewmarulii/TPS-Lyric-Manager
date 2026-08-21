@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Liturgy Display</title>
+<link rel="stylesheet" href="liturgy-display.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="textBlock" class="text-block">
+      <div id="participantName" class="participant-name"></div>
+      <br>
+      <br>
+      <div id="programName" class="program-name"></div>
+    </div>
+  </div>
+  <script src="liturgy-display.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+
+    if (params.has("preview")) {
+      document.body.classList.add("preview-mode");
+    }
+  </script>
+</body>
+</html>
