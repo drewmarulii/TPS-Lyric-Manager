@@ -104,6 +104,12 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/logo-animation', (req, res) => {
+  res.sendFile(
+    path.join(__dirname, 'public', 'logo-animation.html')
+  );
+});
+
 // ---------- optional auth ----------
 // Gates song-library management (create/edit/delete) and liturgy editing.
 // Live show control (load/next/prev/blank, liturgy show/blank) stays open
@@ -332,4 +338,5 @@ server.listen(PORT, () => {
   console.log(`  Lyrics OBS display  : http://localhost:${PORT}/display.html`);
   console.log(`  Liturgy control     : http://localhost:${PORT}/liturgy-control.html`);
   console.log(`  Liturgy OBS display : http://localhost:${PORT}/liturgy-display.html`);
+  console.log(`  Logo TPS display    : http://localhost:${PORT}/logo-animation.html`);
 });
