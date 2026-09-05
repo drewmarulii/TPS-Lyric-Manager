@@ -55,17 +55,17 @@ body {
     align-items: center;
 
     backface-visibility: hidden;
-
     -webkit-backface-visibility: hidden;
 }
 
 .logo-face img {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
     display: block;
+
+ /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)); */
+    filter: drop-shadow(0 3px 5px rgb(252, 252, 252));
 }
 
 .logo-front {
