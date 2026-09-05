@@ -58,14 +58,22 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
+/* Both logos use the same visual height */
 .logo-face img {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 220px;
+
+    max-width: 260px;
+
     object-fit: contain;
+
     display: block;
 
- /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)); */
-    filter: drop-shadow(0 3px 5px rgb(252, 252, 252));
+    /* Subtle lifted effect */
+    filter: drop-shadow(
+        0 3px 5px
+        rgba(252, 252, 252, 0.9)
+    );
 }
 
 .logo-front {
