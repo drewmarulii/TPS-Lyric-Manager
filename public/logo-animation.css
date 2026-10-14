@@ -1,89 +1,50 @@
-html,
 body {
     margin: 0;
-    padding: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: transparent;
-
-    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;     /* Vertically centers */
+    background-color: #f0f0f0; /* Optional: just to see the page background */
 }
 
 .logo-container {
-    width: 100%;
-    height: 100%;
-
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
     display: flex;
-
     justify-content: center;
     align-items: center;
-
-    perspective: 1000px;
 }
 
 .logo-card {
+    width: 100%;
+    height: 100%;
     position: relative;
-
-    width: 300px;
-    height: 300px;
-
     transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
 
-    transition:
-        transform 1s cubic-bezier(
-            0.4,
-            0.0,
-            0.2,
-            1
-        );
+/* When this class is added, the card flips 180deg */
+.logo-card.flipped {
+    transform: rotateY(180deg);
 }
 
 .logo-face {
     position: absolute;
-
     width: 100%;
     height: 100%;
-
-    top: 0;
-    left: 0;
-
+    backface-visibility: hidden;
     display: flex;
-
     justify-content: center;
     align-items: center;
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Both logos use the same visual height */
-.logo-face img {
-    width: auto;
-    height: 220px;
-
-    max-width: 260px;
-
-    object-fit: contain;
-
-    display: block;
-
-    /* Subtle lifted effect */
-    filter: drop-shadow(
-        0 3px 5px
-        rgba(252, 252, 252, 0.9)
-    );
-}
-
-.logo-front {
-    transform: rotateY(0deg);
 }
 
 .logo-back {
     transform: rotateY(180deg);
 }
 
-.logo-card.flipped {
-    transform: rotateY(180deg);
+.logo-face img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
