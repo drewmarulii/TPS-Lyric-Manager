@@ -9,8 +9,6 @@ async function initLogoAnimation() {
         const config = await response.json();
         const logos = config.logos;
 
-        console.log('Logos:', logos);
-
         if (!Array.isArray(logos) || logos.length < 2) {
             throw new Error('LOGOS must contain at least 2 logo URLs');
         }
