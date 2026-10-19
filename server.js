@@ -333,9 +333,14 @@ app.post('/api/liturgy-control/blank', (req, res) => {
 });
 
 app.get('/api/config', (req, res) => {
-    res.json({
-        logos: process.env.LOGOS
-    });
+    try {
+        const logos = JSON.parse(process.env.LOGOS || '[]');
+
+        res.json({ logos });
+    } catch (error) {
+        console.error('Invalid LOGOS environment variable:', error);
+        res.status(500).json({ error: 'Invalid LOGOS configuration' });
+    }
 });
 
 server.listen(PORT, () => {
