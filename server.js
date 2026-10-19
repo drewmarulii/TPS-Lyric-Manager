@@ -10,6 +10,7 @@ const LITURGY_SEED_FILE = path.join(__dirname, 'data', 'liturgy.json');
 // If set, all write endpoints (POST/PUT/DELETE under /api) require this token
 // via an "X-Auth-Token" header. Leave unset for local/LAN-only use.
 const AUTH_TOKEN = process.env.LYRIC_MANAGER_PASSWORD || '';
+const logos = process.env.LOGOS;
 
 // ---------- storage backend ----------
 // Two modes:
@@ -329,6 +330,12 @@ app.post('/api/liturgy-control/blank', (req, res) => {
   liturgyState.blanked = !!blanked;
   broadcastLiturgy();
   res.json(buildLiturgyPayload());
+});
+
+app.get('/api/config', (req, res) => {
+    res.json({
+        logos: process.env.LOGOS
+    });
 });
 
 server.listen(PORT, () => {

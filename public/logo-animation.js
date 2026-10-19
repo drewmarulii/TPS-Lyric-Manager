@@ -1,6 +1,10 @@
-const logos = process.env.LOGOS;
-console.log(logos);
-
+const logos = fetch('/api/config')
+    .then(response => response.json())
+    .then(config => {
+        const logos = config.logos;
+        console.log(logos);
+    });
+    
 const logoCard = document.querySelector(".logo-card");
 const frontImg = document.getElementById("front-img");
 const backImg = document.getElementById("back-img");
