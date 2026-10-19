@@ -1,4 +1,4 @@
-const logos = JSON.parse(process.env.LOGOS);
+const logos = process.env.LOGOS;
 console.log(logos);
 
 const logoCard = document.querySelector(".logo-card");
